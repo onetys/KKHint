@@ -202,7 +202,7 @@ extension KKHint {
         
         if let eIcon = icon {
             // 设置图片
-            hud.customView = UIImageView.init(image: UIImage.init(named: "MBProgressHUD.bundle/\(eIcon)"))
+            hud.customView = UIImageView.init(image: UIImage.init(named: "Frameworks/KKHint.framework/MBProgressHUD.bundle/\(eIcon)"))
         }
         
         hud.cornerRadius = 3
@@ -216,12 +216,12 @@ extension KKHint {
     
     
     open class func showError(_ error: String?, toView: UIView?) {
-        self.show(error, icon: "error.png", view: toView)
+        self.show(error, icon: "error@2x.png", view: toView)
     }
     
     
     open class func showSuccess(_ success: String?, toView: UIView?) {
-        self.show(success, icon: "success.png", view: toView)
+        self.show(success, icon: "success@2x.png", view: toView)
     }
     
     
