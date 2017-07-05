@@ -15,8 +15,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let window = UIApplication.shared.delegate?.window
-        
     }
     
     @IBAction func autoDismiss(_ sender: Any) {
@@ -40,11 +38,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func success(_ sender: Any) {
-        SMHudHelper.showSuccess("成功", toView: self.view)
+        KKHint.showSuccess("成功", toView: self.view)
     }
     
     @IBAction func fail(_ sender: Any) {
-        SMHudHelper.showError("失败", toView: self.view)
+        KKHint.showError("失败", toView: self.view)
     }
     
     override func didReceiveMemoryWarning() {

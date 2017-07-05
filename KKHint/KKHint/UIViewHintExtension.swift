@@ -117,7 +117,7 @@ extension UIView {
     
     open func makeActivity(title showTitle: String?)
     {
-        SMHudHelper.makeActivityWithTitle(showTitle, view: self, tapIn: false)
+        KKHint.makeActivityWithTitle(showTitle, view: self, tapIn: false)
     }
     
     open func hiddenActivity()
@@ -127,7 +127,7 @@ extension UIView {
     
     open func hiddenActivity(_ animated: Bool)
     {
-        SMHudHelper.hiddenActivityForView(self, animated: animated)
+        KKHint.hiddenActivityForView(self, animated: animated)
     }
 }
 
@@ -140,14 +140,14 @@ extension UIView {
     open func makeCTHint(title showTitle: String?,
                                  content: String?)
     {
-        SMHudHelper.makeHitWithTitle(showTitle,content: content, view: self, duration: SMHudHelper.SMMBDurationForever, tapIn: false, superTop: SMHudHelper.SMMBSuperTopInvalid, superBot: SMHudHelper.SMMBSuperBottomInvalid)
+        KKHint.makeHitWithTitle(showTitle,content: content, view: self, duration: KKHint.SMMBDurationForever, tapIn: false, superTop: KKHint.SMMBSuperTopInvalid, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     // eg: title、identity、bot
     open func makeCTHint(title showTitle: String?,
                                  content: String?,
                                  superBot: CGFloat)
     {
-        SMHudHelper.makeHitWithTitle(showTitle, content: content, view: self, duration: SMHudHelper.SMMBDurationForever, tapIn: false, superTop: SMHudHelper.SMMBSuperTopInvalid, superBot: superBot)
+        KKHint.makeHitWithTitle(showTitle, content: content, view: self, duration: KKHint.SMMBDurationForever, tapIn: false, superTop: KKHint.SMMBSuperTopInvalid, superBot: superBot)
     }
     
     // eg: title、identity、bot
@@ -155,7 +155,7 @@ extension UIView {
                                  content: String?,
                                  superTop: CGFloat)
     {
-        SMHudHelper.makeHitWithTitle(showTitle, content: content, view: self, duration: SMHudHelper.SMMBDurationForever, tapIn: false, superTop: superTop, superBot: SMHudHelper.SMMBSuperBottomInvalid)
+        KKHint.makeHitWithTitle(showTitle, content: content, view: self, duration: KKHint.SMMBDurationForever, tapIn: false, superTop: superTop, superBot: KKHint.SMMBSuperBottomInvalid)
     }
 }
 
@@ -171,7 +171,7 @@ extension UIView {
     
     open func hiddenHud(_ animated: Bool)
     {
-        SMHudHelper.hiddenHintForView(self, animated: true)
+        KKHint.hiddenHintForView(self, animated: true)
     }
     
     open func makeHint(_ title: String?) {
@@ -187,39 +187,39 @@ extension UIView {
     }
     
     open func makeHint(_ title: String?, content: String?, tf: UIFont, cf: UIFont) {
-        self.makeHitWithTitle(title, content: content, view: self, duration: SMHudHelper.SMMBDurationDefault, tf: tf, cf: cf, tapIn: false, superTop: SMHudHelper.SMMBSuperTopInvalid, superBot: SMHudHelper.SMMBSuperBottomInvalid)
+        self.makeHitWithTitle(title, content: content, view: self, duration: KKHint.SMMBDurationDefault, tf: tf, cf: cf, tapIn: false, superTop: KKHint.SMMBSuperTopInvalid, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     
     open func makeHint(title showTitle: String?,
-                               superBot:  SMHudHelper.SMMBSuperBottom)
+                               superBot:  KKHint.SMMBSuperBottom)
     {
-        SMHudHelper.makeHitWithTitle(showTitle, view: self, duration: SMHudHelper.SMMBDurationDefault, tapIn: false, superTop: SMHudHelper.SMMBSuperTopInvalid, superBot: superBot)
+        KKHint.makeHitWithTitle(showTitle, view: self, duration: KKHint.SMMBDurationDefault, tapIn: false, superTop: KKHint.SMMBSuperTopInvalid, superBot: superBot)
     }
     
     open func makeHint(title showTitle: String?,
-                               superTop: SMHudHelper.SMMBSuperTop)
+                               superTop: KKHint.SMMBSuperTop)
     {
-        SMHudHelper.makeHitWithTitle(showTitle, view: self, duration: SMHudHelper.SMMBDurationDefault, tapIn: false, superTop: superTop, superBot: SMHudHelper.SMMBSuperBottomInvalid)
+        KKHint.makeHitWithTitle(showTitle, view: self, duration: KKHint.SMMBDurationDefault, tapIn: false, superTop: superTop, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     
     open func makeHint(title showTitle: String?,
                                content: String?,
                                tapIn: Bool)
     {
-        SMHudHelper.makeHitWithTitle(showTitle, content: content, view: self, duration: SMHudHelper.SMMBDurationDefault, tapIn: tapIn, superTop: SMHudHelper.SMMBSuperTopInvalid, superBot: SMHudHelper.SMMBSuperBottomInvalid)
+        KKHint.makeHitWithTitle(showTitle, content: content, view: self, duration: KKHint.SMMBDurationDefault, tapIn: tapIn, superTop: KKHint.SMMBSuperTopInvalid, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     
     open func makeHint(title showTitle: String?,
                                tapIn: Bool)
     {
-        SMHudHelper.makeHitWithTitle(showTitle, view: self, duration: SMHudHelper.SMMBDurationDefault, tapIn: tapIn, superTop: SMHudHelper.SMMBSuperTopInvalid, superBot: SMHudHelper.SMMBSuperBottomInvalid)
+        KKHint.makeHitWithTitle(showTitle, view: self, duration: KKHint.SMMBDurationDefault, tapIn: tapIn, superTop: KKHint.SMMBSuperTopInvalid, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     
     open func makeHint(title showTitle: String?,
                                tapIn: Bool,
-                               duration: SMHudHelper.SMMBDuration)
+                               duration: KKHint.SMMBDuration)
     {
-        SMHudHelper.makeHitWithTitle(showTitle, view: self, duration: duration, tapIn: tapIn, superTop: SMHudHelper.SMMBSuperTopInvalid, superBot: SMHudHelper.SMMBSuperBottomInvalid)
+        KKHint.makeHitWithTitle(showTitle, view: self, duration: duration, tapIn: tapIn, superTop: KKHint.SMMBSuperTopInvalid, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     
     /// identity： 为了兼容到一个页面同时提示多个文本，则设置多个identity
@@ -229,10 +229,10 @@ extension UIView {
     open func makeHitWithTitle(_ title: String?,
                                 duration: Double,
                                 tapIn: Bool,
-                                superTop: SMHudHelper.SMMBSuperTop,
-                                superBot: SMHudHelper.SMMBSuperBottom)
+                                superTop: KKHint.SMMBSuperTop,
+                                superBot: KKHint.SMMBSuperBottom)
     {
-        SMHudHelper.makeHitWithTitle(title, view: self, duration: duration, tapIn: tapIn, superTop: superTop, superBot: superBot)
+        KKHint.makeHitWithTitle(title, view: self, duration: duration, tapIn: tapIn, superTop: superTop, superBot: superBot)
     }
     
     /// identity： 为了兼容到一个页面同时提示多个文本，则设置多个identity
@@ -246,10 +246,10 @@ extension UIView {
                                tf: UIFont,
                                cf: UIFont,
                                tapIn: Bool,
-                               superTop: SMHudHelper.SMMBSuperTop,
-                               superBot: SMHudHelper.SMMBSuperBottom)
+                               superTop: KKHint.SMMBSuperTop,
+                               superBot: KKHint.SMMBSuperBottom)
     {
-        SMHudHelper.makeHitWithTitle(title, content: content, view: self, duration: duration, tf: tf, cf: cf, tapIn: tapIn, superTop: superTop, superBot: superBot)
+        KKHint.makeHitWithTitle(title, content: content, view: self, duration: duration, tf: tf, cf: cf, tapIn: tapIn, superTop: superTop, superBot: superBot)
     }
 }
 
@@ -263,9 +263,9 @@ extension UIView {
                                  view: UIView?,
                                  duration: Double,
                                  tapIn: Bool,
-                                 superTop: SMHudHelper.SMMBSuperTop,
-                                 superBot: SMHudHelper.SMMBSuperBottom)
+                                 superTop: KKHint.SMMBSuperTop,
+                                 superBot: KKHint.SMMBSuperBottom)
     {
-        SMHudHelper.makeHitWithTitle(title, view: self, duration: duration, tapIn: tapIn, superTop: superTop, superBot: superBot)
+        KKHint.makeHitWithTitle(title, view: self, duration: duration, tapIn: tapIn, superTop: superTop, superBot: superBot)
     }
 }

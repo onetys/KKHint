@@ -1,5 +1,5 @@
 //
-//  SMHudHelper.swift
+//  KKHint.swift
 //  KKSwiftFactory
 //
 //  Created by KING on 2016/12/6.
@@ -13,7 +13,7 @@ import UIKit
 // 如果项目为 OC 项目，则屏蔽此行代码即可
 import MBProgressHUD
 
-open class SMHudHelper {
+open class KKHint {
     
     public typealias SMMBDuration = TimeInterval
     
@@ -182,7 +182,7 @@ open class SMHudHelper {
 
 
 
-extension SMHudHelper {
+extension KKHint {
     
     open class func show(_ text: String?, icon: String?, view: UIView?) {
         
@@ -266,7 +266,7 @@ extension SMHudHelper {
         guard let eView = view else {
             return;
         }
-        SMHudHelper.makeHitWithTitle(content, view: eView, duration: SMHudHelper.SMMBDurationDefault, tapIn: false, superTop: -1, superBot: -1)
+        KKHint.makeHitWithTitle(content, view: eView, duration: KKHint.SMMBDurationDefault, tapIn: false, superTop: -1, superBot: -1)
     }
     
     open class func showSuccess(_ success: String?) {
