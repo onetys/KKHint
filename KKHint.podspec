@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.name         = "KKHint"
 
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
 
   s.summary      = "KKHint -> custom hint view"
 
@@ -28,5 +28,7 @@ Pod::Spec.new do |s|
 s.dependency 'MBProgressHUD', '~> 0.9.2'
 
   s.source_files  = "KKHint/KKHint/**/*.{swift}"
+
+  s.resource     = "KKHint/KKHint/MBProgressHUD.bundle"
 
 end

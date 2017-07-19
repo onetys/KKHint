@@ -37,34 +37,36 @@ open class KKHint {
                                      view: UIView?,
                                      tapIn: Bool)
     {
-        guard let eView = view else {
-            return
-        }
-        
-        MBProgressHUD.hide(for: eView, animated: true)
-        
-        let hud = MBProgressHUD.init(view: eView)!
-        
-        hud.mode = .indeterminate
-        
-        hud.margin = 10
-        
-        hud.cornerRadius = 3;
-        
-        if !((title ?? "").isEmpty) {
-        
-            hud.detailsLabelText = title
+        KKSafeMain {
+            guard let eView = view else {
+                return
+            }
             
-            hud.detailsLabelFont  = UIFont.systemFont(ofSize: 14)
+            MBProgressHUD.hide(for: eView, animated: true)
             
-            hud.detailsLabelColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 1)
+            let hud = MBProgressHUD.init(view: eView)!
+            
+            hud.mode = .indeterminate
+            
+            hud.margin = 10
+            
+            hud.cornerRadius = 3;
+            
+            if !((title ?? "").isEmpty) {
+            
+                hud.detailsLabelText = title
+                
+                hud.detailsLabelFont  = UIFont.systemFont(ofSize: 14)
+                
+                hud.detailsLabelColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 1)
+            }
+            
+            hud.isUserInteractionEnabled = !tapIn
+            
+            eView.addSubview(hud)
+            
+            hud.show(true)
         }
-        
-        hud.isUserInteractionEnabled = !tapIn
-        
-        eView.addSubview(hud)
-        
-        hud.show(true)
     }
     
     open class func hiddenActivityForView(_ view: UIView, animated: Bool) {
@@ -103,62 +105,63 @@ open class KKHint {
                                 superTop:SMMBSuperTop,
                                 superBot: SMMBSuperBottom)
     {
-        
-        if (title ?? "").isEmpty && (content ?? "").isEmpty{
-            return
-        }
-        
-        self.hiddenHintForView(view, animated: false)
-        
-        let hud = MBProgressHUD.init(view: view)!
-        
-        hud.removeFromSuperViewOnHide = true
-        
-        hud.mode = .text
-        
-        hud.margin = 10
-        
-        if let _ = content {
-            
-            hud.labelFont = tf
-            
-            hud.labelText = title
-            
-            hud.detailsLabelFont = cf
-            
-            hud.detailsLabelText = content
-        } else {
-            
-            hud.detailsLabelFont = tf
-            
-            hud.detailsLabelText = title
-        }
-        
-        hud.cornerRadius = 3
-        
-        hud.isUserInteractionEnabled = !tapIn
-        
-        view.addSubview(hud)
-        
-        if superTop != SMMBSuperTopInvalid {
-            
-            hud.layoutSubviews()
-            
-            if let label = hud.value(forKeyPath: "label") as? UILabel, let detailsLabel = hud.value(forKeyPath: "detailsLabel") as? UILabel {
-                hud.yOffset = Float(self.setOffSetForTop(superTop, viewHeight: view.frame.size.height, H: label.frame.size.height + detailsLabel.frame.size.height + 20))
+        KKSafeMain {
+            if (title ?? "").isEmpty && (content ?? "").isEmpty{
+                return
             }
-        }else if superBot != SMMBSuperBottomInvalid {
             
-            hud.layoutSubviews()
-            if let label = hud.value(forKeyPath: "label") as? UILabel, let detailsLabel = hud.value(forKeyPath: "detailsLabel") as? UILabel {
-                hud.yOffset = Float(self.setOffSetForBto(superBot, viewHeight: view.frame.size.height, H: label.frame.size.height + detailsLabel.frame.size.height + 20))
+            self.hiddenHintForView(view, animated: false)
+            
+            let hud = MBProgressHUD.init(view: view)!
+            
+            hud.removeFromSuperViewOnHide = true
+            
+            hud.mode = .text
+            
+            hud.margin = 10
+            
+            if let _ = content {
+                
+                hud.labelFont = tf
+                
+                hud.labelText = title
+                
+                hud.detailsLabelFont = cf
+                
+                hud.detailsLabelText = content
+            } else {
+                
+                hud.detailsLabelFont = tf
+                
+                hud.detailsLabelText = title
             }
-        }
-        
-        hud.show(true)
-        
-        if duration != SMMBDurationForever {
-            hud.hide(true, afterDelay: duration)
+            
+            hud.cornerRadius = 3
+            
+            hud.isUserInteractionEnabled = !tapIn
+            
+            view.addSubview(hud)
+            
+            if superTop != SMMBSuperTopInvalid {
+                
+                hud.layoutSubviews()
+                
+                if let label = hud.value(forKeyPath: "label") as? UILabel, let detailsLabel = hud.value(forKeyPath: "detailsLabel") as? UILabel {
+                    hud.yOffset = Float(self.setOffSetForTop(superTop, viewHeight: view.frame.size.height, H: label.frame.size.height + detailsLabel.frame.size.height + 20))
+                }
+            }else if superBot != SMMBSuperBottomInvalid {
+                
+                hud.layoutSubviews()
+                if let label = hud.value(forKeyPath: "label") as? UILabel, let detailsLabel = hud.value(forKeyPath: "detailsLabel") as? UILabel {
+                    hud.yOffset = Float(self.setOffSetForBto(superBot, viewHeight: view.frame.size.height, H: label.frame.size.height + detailsLabel.frame.size.height + 20))
+                }
+            }
+            
+            hud.show(true)
+            
+            if duration != SMMBDurationForever {
+                hud.hide(true, afterDelay: duration)
+            }
         }
     }
     
@@ -186,32 +189,34 @@ extension KKHint {
     
     open class func show(_ text: String?, icon: String?, view: UIView?) {
         
-        let showView = view ?? (self.lastWindow() ?? nil)
-        
-        guard let eView = showView, let eText = text,   !eText.isEmpty else{
-            return
+        KKSafeMain {
+            let showView = view ?? (self.lastWindow() ?? nil)
+            
+            guard let eView = showView, let eText = text,   !eText.isEmpty else{
+                return
+            }
+            
+            let hud = MBProgressHUD.showAdded(to: eView, animated: true)!
+            
+            hud.mode = .customView
+            
+            hud.detailsLabelText = eText
+            
+            hud.detailsLabelFont  = UIFont.systemFont(ofSize: 15)
+            
+            if let eIcon = icon {
+                // 设置图片
+                hud.customView = UIImageView.init(image: UIImage.init(named: "Frameworks/KKHint.framework/MBProgressHUD.bundle/\(eIcon)"))
+            }
+            
+            hud.cornerRadius = 3
+            
+            hud.mode = .customView
+            
+            hud.removeFromSuperViewOnHide = true
+            
+            hud.hide(true, afterDelay: 2.0)
         }
-        
-        let hud = MBProgressHUD.showAdded(to: eView, animated: true)!
-        
-        hud.mode = .customView
-        
-        hud.detailsLabelText = eText
-        
-        hud.detailsLabelFont  = UIFont.systemFont(ofSize: 15)
-        
-        if let eIcon = icon {
-            // 设置图片
-            hud.customView = UIImageView.init(image: UIImage.init(named: "Frameworks/KKHint.framework/MBProgressHUD.bundle/\(eIcon)"))
-        }
-        
-        hud.cornerRadius = 3
-        
-        hud.mode = .customView
-        
-        hud.removeFromSuperViewOnHide = true
-        
-        hud.hide(true, afterDelay: 2.0)
     }
     
     
@@ -228,35 +233,38 @@ extension KKHint {
     // MARK: - 显示一些信息
     
     open class func showMessage(_ message: String?, toView: UIView?) {
-        let view = toView ?? self.lastWindow()
+        KKSafeMain {
+            let view = toView ?? self.lastWindow()
         
-        guard let eView = view, let msg = message,   !msg.isEmpty  else {
-            return;
+            guard let eView = view, let msg = message,   !msg.isEmpty  else {
+                return;
+            }
+            
+            let hud = MBProgressHUD.showAdded(to: eView, animated: true)!
+            hud.detailsLabelText = message
+            hud.removeFromSuperViewOnHide = true
+            hud.margin = 10
+            hud.cornerRadius = 3;
+            hud.detailsLabelFont  = UIFont.systemFont(ofSize: 15)
+            hud.detailsLabelColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 1)
         }
-        
-        let hud = MBProgressHUD.showAdded(to: eView, animated: true)!
-        hud.detailsLabelText = message
-        hud.removeFromSuperViewOnHide = true
-        hud.margin = 10
-        hud.cornerRadius = 3;
-        hud.detailsLabelFont  = UIFont.systemFont(ofSize: 15)
-        hud.detailsLabelColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
     open class func showDimMessage(_ message: String?, toView: UIView?) {
-        
-        let view = toView ?? self.lastWindow()
-        
-        guard let eView = view, let msg = message,   !msg.isEmpty else {
-            return ;
+        KKSafeMain {
+            let view = toView ?? self.lastWindow()
+            
+            guard let eView = view, let msg = message,   !msg.isEmpty else {
+                return ;
+            }
+            let hud = MBProgressHUD.showAdded(to: eView, animated: true)!
+            hud.detailsLabelText = message
+            hud.dimBackground = true
+            hud.margin = 10
+            hud.cornerRadius = 3;
+            hud.detailsLabelFont  = UIFont.systemFont(ofSize: 15)
+            hud.detailsLabelColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 1)
         }
-        let hud = MBProgressHUD.showAdded(to: eView, animated: true)!
-        hud.detailsLabelText = message
-        hud.dimBackground = true
-        hud.margin = 10
-        hud.cornerRadius = 3;
-        hud.detailsLabelFont  = UIFont.systemFont(ofSize: 15)
-        hud.detailsLabelColor = UIColor.init(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
     open class func showMessagWithContent(_ content: String?, toView: UIView?) {
@@ -282,7 +290,9 @@ extension KKHint {
     }
     
     open class func hideHUDForView(_ view: UIView) {
-        MBProgressHUD.hide(for: view, animated: true)
+        KKSafeMain {
+            MBProgressHUD.hide(for: view, animated: true)
+        }
     }
     
     open class func hideHUD() {
@@ -293,9 +303,11 @@ extension KKHint {
     
     open class func hideAllHUDToView(_ view: UIView?) {
         
-        if let eView = view ?? self.lastWindow() {
-            
-            MBProgressHUD.hideAllHUDs(for: eView, animated: true)
+        KKSafeMain {
+            if let eView = view ?? self.lastWindow() {
+                
+                MBProgressHUD.hideAllHUDs(for: eView, animated: true)
+            }
         }
     }
     
@@ -305,3 +317,18 @@ extension KKHint {
     }
     
 }
+
+private func KKSafeMain(_ block: @escaping ()->Void) {
+    
+    if Thread.current.isMainThread {
+        block()
+    } else {
+        DispatchQueue.main.async(execute: block)
+    }
+}
+
+
+
+
+
+
