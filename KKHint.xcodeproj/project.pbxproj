@@ -7,117 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A21A5D561F0D2C5F0090BD56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A5D551F0D2C5F0090BD56 /* AppDelegate.swift */; };
-		A21A5D581F0D2C5F0090BD56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A5D571F0D2C5F0090BD56 /* ViewController.swift */; };
-		A21A5D5B1F0D2C5F0090BD56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A21A5D591F0D2C5F0090BD56 /* Main.storyboard */; };
-		A21A5D5D1F0D2C5F0090BD56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21A5D5C1F0D2C5F0090BD56 /* Assets.xcassets */; };
-		A21A5D601F0D2C5F0090BD56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A21A5D5E1F0D2C5F0090BD56 /* LaunchScreen.storyboard */; };
-		A21A5D751F0D2CD00090BD56 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A21A5D711F0D2CD00090BD56 /* MBProgressHUD.bundle */; };
-		A21A5D771F0D2CD00090BD56 /* KKHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A5D731F0D2CD00090BD56 /* KKHint.swift */; };
-		A21A5D781F0D2CD00090BD56 /* UIViewHintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A5D741F0D2CD00090BD56 /* UIViewHintExtension.swift */; };
-		C080A7B6133AD9CFF1CD72C3 /* Pods_KKHint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4894A769C4855795AB56EF /* Pods_KKHint.framework */; };
+		A21B27811F4DDDA30071167D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21B27801F4DDDA30071167D /* AppDelegate.swift */; };
+		A21B27831F4DDDA30071167D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21B27821F4DDDA30071167D /* ViewController.swift */; };
+		A21B27861F4DDDA30071167D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A21B27841F4DDDA30071167D /* Main.storyboard */; };
+		A21B27881F4DDDA30071167D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21B27871F4DDDA30071167D /* Assets.xcassets */; };
+		A21B278B1F4DDDA30071167D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A21B27891F4DDDA30071167D /* LaunchScreen.storyboard */; };
+		A21B27971F4DDDD90071167D /* KKHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21B27931F4DDDD90071167D /* KKHint.swift */; };
+		A21B27981F4DDDD90071167D /* KKHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21B27941F4DDDD90071167D /* KKHintView.swift */; };
+		A21B27991F4DDDD90071167D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A21B27951F4DDDD90071167D /* MBProgressHUD.bundle */; };
+		A21B279A1F4DDDD90071167D /* UIViewHintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21B27961F4DDDD90071167D /* UIViewHintExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B4894A769C4855795AB56EF /* Pods_KKHint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKHint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		87B4A8D13C7BB345F9AC52F0 /* Pods-KKHint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKHint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KKHint/Pods-KKHint.debug.xcconfig"; sourceTree = "<group>"; };
-		A21A5D521F0D2C5F0090BD56 /* KKHint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKHint.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A21A5D551F0D2C5F0090BD56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A21A5D571F0D2C5F0090BD56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A21A5D5A1F0D2C5F0090BD56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A21A5D5C1F0D2C5F0090BD56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A21A5D5F1F0D2C5F0090BD56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A21A5D611F0D2C5F0090BD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A21A5D711F0D2CD00090BD56 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
-		A21A5D731F0D2CD00090BD56 /* KKHint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKHint.swift; sourceTree = "<group>"; };
-		A21A5D741F0D2CD00090BD56 /* UIViewHintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHintExtension.swift; sourceTree = "<group>"; };
-		F5B47C3E01F8EA9CF5D6B70C /* Pods-KKHint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKHint.release.xcconfig"; path = "Pods/Target Support Files/Pods-KKHint/Pods-KKHint.release.xcconfig"; sourceTree = "<group>"; };
+		A21B277D1F4DDDA30071167D /* KKHint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKHint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A21B27801F4DDDA30071167D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A21B27821F4DDDA30071167D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A21B27851F4DDDA30071167D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A21B27871F4DDDA30071167D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A21B278A1F4DDDA30071167D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A21B278C1F4DDDA30071167D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A21B27931F4DDDD90071167D /* KKHint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKHint.swift; sourceTree = "<group>"; };
+		A21B27941F4DDDD90071167D /* KKHintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKHintView.swift; sourceTree = "<group>"; };
+		A21B27951F4DDDD90071167D /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		A21B27961F4DDDD90071167D /* UIViewHintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHintExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A21A5D4F1F0D2C5F0090BD56 /* Frameworks */ = {
+		A21B277A1F4DDDA30071167D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C080A7B6133AD9CFF1CD72C3 /* Pods_KKHint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C7BE305166B67F747AE8FF0 /* Frameworks */ = {
+		A21B27741F4DDDA30071167D = {
 			isa = PBXGroup;
 			children = (
-				1B4894A769C4855795AB56EF /* Pods_KKHint.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A21A5D491F0D2C5F0090BD56 = {
-			isa = PBXGroup;
-			children = (
-				A21A5D541F0D2C5F0090BD56 /* KKHint */,
-				A21A5D531F0D2C5F0090BD56 /* Products */,
-				AB849E32144CC2DAAA026D60 /* Pods */,
-				3C7BE305166B67F747AE8FF0 /* Frameworks */,
+				A21B277F1F4DDDA30071167D /* KKHint */,
+				A21B277E1F4DDDA30071167D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A21A5D531F0D2C5F0090BD56 /* Products */ = {
+		A21B277E1F4DDDA30071167D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A21A5D521F0D2C5F0090BD56 /* KKHint.app */,
+				A21B277D1F4DDDA30071167D /* KKHint.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A21A5D541F0D2C5F0090BD56 /* KKHint */ = {
+		A21B277F1F4DDDA30071167D /* KKHint */ = {
 			isa = PBXGroup;
 			children = (
-				A21A5D701F0D2CD00090BD56 /* KKHint */,
-				A21A5D551F0D2C5F0090BD56 /* AppDelegate.swift */,
-				A21A5D571F0D2C5F0090BD56 /* ViewController.swift */,
-				A21A5D591F0D2C5F0090BD56 /* Main.storyboard */,
-				A21A5D5C1F0D2C5F0090BD56 /* Assets.xcassets */,
-				A21A5D5E1F0D2C5F0090BD56 /* LaunchScreen.storyboard */,
-				A21A5D611F0D2C5F0090BD56 /* Info.plist */,
+				A21B27921F4DDDD90071167D /* KKHint */,
+				A21B27801F4DDDA30071167D /* AppDelegate.swift */,
+				A21B27821F4DDDA30071167D /* ViewController.swift */,
+				A21B27841F4DDDA30071167D /* Main.storyboard */,
+				A21B27871F4DDDA30071167D /* Assets.xcassets */,
+				A21B27891F4DDDA30071167D /* LaunchScreen.storyboard */,
+				A21B278C1F4DDDA30071167D /* Info.plist */,
 			);
 			path = KKHint;
 			sourceTree = "<group>";
 		};
-		A21A5D701F0D2CD00090BD56 /* KKHint */ = {
+		A21B27921F4DDDD90071167D /* KKHint */ = {
 			isa = PBXGroup;
 			children = (
-				A21A5D711F0D2CD00090BD56 /* MBProgressHUD.bundle */,
-				A21A5D731F0D2CD00090BD56 /* KKHint.swift */,
-				A21A5D741F0D2CD00090BD56 /* UIViewHintExtension.swift */,
+				A21B27931F4DDDD90071167D /* KKHint.swift */,
+				A21B27941F4DDDD90071167D /* KKHintView.swift */,
+				A21B27951F4DDDD90071167D /* MBProgressHUD.bundle */,
+				A21B27961F4DDDD90071167D /* UIViewHintExtension.swift */,
 			);
 			path = KKHint;
-			sourceTree = "<group>";
-		};
-		AB849E32144CC2DAAA026D60 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				87B4A8D13C7BB345F9AC52F0 /* Pods-KKHint.debug.xcconfig */,
-				F5B47C3E01F8EA9CF5D6B70C /* Pods-KKHint.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A21A5D511F0D2C5F0090BD56 /* KKHint */ = {
+		A21B277C1F4DDDA30071167D /* KKHint */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A21A5D641F0D2C5F0090BD56 /* Build configuration list for PBXNativeTarget "KKHint" */;
+			buildConfigurationList = A21B278F1F4DDDA30071167D /* Build configuration list for PBXNativeTarget "KKHint" */;
 			buildPhases = (
-				63FE85539CB7FE8DA4605796 /* [CP] Check Pods Manifest.lock */,
-				A21A5D4E1F0D2C5F0090BD56 /* Sources */,
-				A21A5D4F1F0D2C5F0090BD56 /* Frameworks */,
-				A21A5D501F0D2C5F0090BD56 /* Resources */,
-				80BDF8E99558DA810C397117 /* [CP] Embed Pods Frameworks */,
-				E44947E1D66D685910C43B58 /* [CP] Copy Pods Resources */,
+				A21B27791F4DDDA30071167D /* Sources */,
+				A21B277A1F4DDDA30071167D /* Frameworks */,
+				A21B277B1F4DDDA30071167D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -125,26 +101,26 @@
 			);
 			name = KKHint;
 			productName = KKHint;
-			productReference = A21A5D521F0D2C5F0090BD56 /* KKHint.app */;
+			productReference = A21B277D1F4DDDA30071167D /* KKHint.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A21A5D4A1F0D2C5F0090BD56 /* Project object */ = {
+		A21B27751F4DDDA30071167D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = king;
 				TargetAttributes = {
-					A21A5D511F0D2C5F0090BD56 = {
+					A21B277C1F4DDDA30071167D = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = A21A5D4D1F0D2C5F0090BD56 /* Build configuration list for PBXProject "KKHint" */;
+			buildConfigurationList = A21B27781F4DDDA30071167D /* Build configuration list for PBXProject "KKHint" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -152,105 +128,58 @@
 				en,
 				Base,
 			);
-			mainGroup = A21A5D491F0D2C5F0090BD56;
-			productRefGroup = A21A5D531F0D2C5F0090BD56 /* Products */;
+			mainGroup = A21B27741F4DDDA30071167D;
+			productRefGroup = A21B277E1F4DDDA30071167D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A21A5D511F0D2C5F0090BD56 /* KKHint */,
+				A21B277C1F4DDDA30071167D /* KKHint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A21A5D501F0D2C5F0090BD56 /* Resources */ = {
+		A21B277B1F4DDDA30071167D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21A5D601F0D2C5F0090BD56 /* LaunchScreen.storyboard in Resources */,
-				A21A5D751F0D2CD00090BD56 /* MBProgressHUD.bundle in Resources */,
-				A21A5D5D1F0D2C5F0090BD56 /* Assets.xcassets in Resources */,
-				A21A5D5B1F0D2C5F0090BD56 /* Main.storyboard in Resources */,
+				A21B278B1F4DDDA30071167D /* LaunchScreen.storyboard in Resources */,
+				A21B27991F4DDDD90071167D /* MBProgressHUD.bundle in Resources */,
+				A21B27881F4DDDA30071167D /* Assets.xcassets in Resources */,
+				A21B27861F4DDDA30071167D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		63FE85539CB7FE8DA4605796 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		80BDF8E99558DA810C397117 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KKHint/Pods-KKHint-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E44947E1D66D685910C43B58 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KKHint/Pods-KKHint-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		A21A5D4E1F0D2C5F0090BD56 /* Sources */ = {
+		A21B27791F4DDDA30071167D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21A5D581F0D2C5F0090BD56 /* ViewController.swift in Sources */,
-				A21A5D561F0D2C5F0090BD56 /* AppDelegate.swift in Sources */,
-				A21A5D781F0D2CD00090BD56 /* UIViewHintExtension.swift in Sources */,
-				A21A5D771F0D2CD00090BD56 /* KKHint.swift in Sources */,
+				A21B27831F4DDDA30071167D /* ViewController.swift in Sources */,
+				A21B27971F4DDDD90071167D /* KKHint.swift in Sources */,
+				A21B27811F4DDDA30071167D /* AppDelegate.swift in Sources */,
+				A21B27981F4DDDD90071167D /* KKHintView.swift in Sources */,
+				A21B279A1F4DDDD90071167D /* UIViewHintExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A21A5D591F0D2C5F0090BD56 /* Main.storyboard */ = {
+		A21B27841F4DDDA30071167D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A21A5D5A1F0D2C5F0090BD56 /* Base */,
+				A21B27851F4DDDA30071167D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A21A5D5E1F0D2C5F0090BD56 /* LaunchScreen.storyboard */ = {
+		A21B27891F4DDDA30071167D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A21A5D5F1F0D2C5F0090BD56 /* Base */,
+				A21B278A1F4DDDA30071167D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -258,7 +187,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A21A5D621F0D2C5F0090BD56 /* Debug */ = {
+		A21B278D1F4DDDA30071167D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -307,7 +236,7 @@
 			};
 			name = Debug;
 		};
-		A21A5D631F0D2C5F0090BD56 /* Release */ = {
+		A21B278E1F4DDDA30071167D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -349,27 +278,25 @@
 			};
 			name = Release;
 		};
-		A21A5D651F0D2C5F0090BD56 /* Debug */ = {
+		A21B27901F4DDDA30071167D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87B4A8D13C7BB345F9AC52F0 /* Pods-KKHint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KKHint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kk.KKHint;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onety.KKHint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		A21A5D661F0D2C5F0090BD56 /* Release */ = {
+		A21B27911F4DDDA30071167D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5B47C3E01F8EA9CF5D6B70C /* Pods-KKHint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KKHint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kk.KKHint;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onety.KKHint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -378,25 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A21A5D4D1F0D2C5F0090BD56 /* Build configuration list for PBXProject "KKHint" */ = {
+		A21B27781F4DDDA30071167D /* Build configuration list for PBXProject "KKHint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A21A5D621F0D2C5F0090BD56 /* Debug */,
-				A21A5D631F0D2C5F0090BD56 /* Release */,
+				A21B278D1F4DDDA30071167D /* Debug */,
+				A21B278E1F4DDDA30071167D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A21A5D641F0D2C5F0090BD56 /* Build configuration list for PBXNativeTarget "KKHint" */ = {
+		A21B278F1F4DDDA30071167D /* Build configuration list for PBXNativeTarget "KKHint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A21A5D651F0D2C5F0090BD56 /* Debug */,
-				A21A5D661F0D2C5F0090BD56 /* Release */,
+				A21B27901F4DDDA30071167D /* Debug */,
+				A21B27911F4DDDA30071167D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A21A5D4A1F0D2C5F0090BD56 /* Project object */;
+	rootObject = A21B27751F4DDDA30071167D /* Project object */;
 }

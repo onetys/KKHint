@@ -8,8 +8,6 @@
 
 import UIKit
 
-import MBProgressHUD
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -18,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func autoDismiss(_ sender: Any) {
-        self.view.makeHint("我马上就消失了")
+        self.view.makeHint("我马上就消失了`我马上就消失了`我马上就消失了`我马上就消失了`我马上就消失了`我马上就消失了`我马上就消失了`我马上就消失了`我马上就消失了`我马上就消失了`")
     }
     
     @IBAction func always(_ sender: Any) {
@@ -45,6 +43,20 @@ class ViewController: UIViewController {
         KKHint.showError("失败", toView: self.view)
     }
     
+    @IBAction func start(_ sender: Any) {
+        self.view.makeActivity(title: "我马上就消失了`我马上就消失了`我马上")
+    }
+    @IBAction func end(_ sender: Any) {
+        self.view.hiddenActivity()
+        
+        let newView = KKHintView.showInView(self.view, type: .text)
+        
+        newView.titleLabel.text = "我马上就消失了`我马上就消失了`我马上我马上就消失了`我马上就消失了`我马上"
+        
+        
+        
+//        KKHintView.showInView(self.view, icon: UIImage(named: "d"), title: "我马上就消失了`我马上就消失了`我马上我马上就消失了`我马上就消失了`我马上", detail: "我马上就消失了`我马上就消失了`我马上我马上就消失了`我马上就消失了`我马上")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
