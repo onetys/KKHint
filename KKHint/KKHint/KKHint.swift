@@ -171,7 +171,7 @@ extension KKHint {
                 
                 let bund = Bundle.init(for: KKHint.self)
                 
-                if let path = bund.path(forResource: "MBProgressHUD.bundle/\(eIcon)", ofType: nil) {
+                if let path = bund.path(forResource: "resource.bundle/\(eIcon)", ofType: nil) {
                     
                     // 设置图片
                     hud.imageView.image = UIImage.init(contentsOfFile: path)

@@ -14,7 +14,7 @@
 		A21B278B1F4DDDA30071167D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A21B27891F4DDDA30071167D /* LaunchScreen.storyboard */; };
 		A21B27971F4DDDD90071167D /* KKHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21B27931F4DDDD90071167D /* KKHint.swift */; };
 		A21B27981F4DDDD90071167D /* KKHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21B27941F4DDDD90071167D /* KKHintView.swift */; };
-		A21B27991F4DDDD90071167D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A21B27951F4DDDD90071167D /* MBProgressHUD.bundle */; };
+		A21B27991F4DDDD90071167D /* resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A21B27951F4DDDD90071167D /* resource.bundle */; };
 		A21B279A1F4DDDD90071167D /* UIViewHintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21B27961F4DDDD90071167D /* UIViewHintExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		A21B278C1F4DDDA30071167D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A21B27931F4DDDD90071167D /* KKHint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKHint.swift; sourceTree = "<group>"; };
 		A21B27941F4DDDD90071167D /* KKHintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKHintView.swift; sourceTree = "<group>"; };
-		A21B27951F4DDDD90071167D /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		A21B27951F4DDDD90071167D /* resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resource.bundle; sourceTree = "<group>"; };
 		A21B27961F4DDDD90071167D /* UIViewHintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHintExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +78,7 @@
 			children = (
 				A21B27931F4DDDD90071167D /* KKHint.swift */,
 				A21B27941F4DDDD90071167D /* KKHintView.swift */,
-				A21B27951F4DDDD90071167D /* MBProgressHUD.bundle */,
+				A21B27951F4DDDD90071167D /* resource.bundle */,
 				A21B27961F4DDDD90071167D /* UIViewHintExtension.swift */,
 			);
 			path = KKHint;
@@ -144,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21B278B1F4DDDA30071167D /* LaunchScreen.storyboard in Resources */,
-				A21B27991F4DDDD90071167D /* MBProgressHUD.bundle in Resources */,
+				A21B27991F4DDDD90071167D /* resource.bundle in Resources */,
 				A21B27881F4DDDA30071167D /* Assets.xcassets in Resources */,
 				A21B27861F4DDDA30071167D /* Main.storyboard in Resources */,
 			);
