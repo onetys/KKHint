@@ -4,16 +4,15 @@ Pod::Spec.new do |s|
 
   s.name         = "KKHint"
 
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
 
   s.summary      = "KKHint -> custom hint view"
 
   s.description  = <<-DESC
-  make a hint on a view.(depend on MBProgressHUD -> 0.9.2)
-  will custom hint view, other than depend MBProgressHUD
+  make a hint on a view. extension for UIView
                    DESC
 
-  s.homepage     = "https://github.com/TieShanWang/SMJRAlertView"
+  s.homepage     = "https://github.com/TieShanWang/KKHint"
 
   s.license      = "MIT"
 
@@ -25,10 +24,8 @@ Pod::Spec.new do |s|
 
   s.framework  = "UIKit"
 
-s.dependency 'MBProgressHUD', '~> 0.9.2'
-
   s.source_files  = "KKHint/KKHint/**/*.{swift}"
 
-  s.resource     = "KKHint/KKHint/MBProgressHUD.bundle"
+  s.resource     = "KKHint/KKHint/resource.bundle"
 
 end

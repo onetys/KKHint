@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-open class KKHint {
+open class KKHint: NSObject {
     
     public typealias SMMBDuration = TimeInterval
     
