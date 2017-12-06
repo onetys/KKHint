@@ -98,20 +98,11 @@ open class KKHint: NSObject {
             
             let hud = KKHintView.showInView(view, type: .text)
             
-            if !((title ?? "").isEmpty) {
-                
-                hud.detailLabel.text = title
-            }
-            
             hud.isUserInteractionEnabled = !tapIn
             
-            if let _ = content {
-                
-                hud.titleLabel.text = title
-            } else {
-                
-                hud.detailLabel.text = title
-            }
+            hud.titleLabel.text = title
+            
+            hud.detailLabel.text = content
             
             if superTop != SMMBSuperTopInvalid {
                 

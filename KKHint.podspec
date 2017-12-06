@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.name         = "KKHint"
 
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
 
   s.summary      = "KKHint -> custom hint view"
 
