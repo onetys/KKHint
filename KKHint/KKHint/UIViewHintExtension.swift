@@ -14,14 +14,15 @@ import UIKit
 
 extension UIView {
     
-    open func makeHintBlowNaviBar(title showTitle: String)
+    open func makeHintBlowNaviBar(title showTitle: String, duration: TimeInterval = 3.0)
     {
-        self.makeHintBlowNavBar(title: showTitle, duration: 1.7,top: (self.frame.size.height == UIScreen.main.bounds.size.height) ? 64 : 0)
+        self.makeHintBlowNavBar(title: showTitle, duration: duration,top: (self.frame.size.height == UIScreen.main.bounds.size.height) ? 64 : 0, backgroundColor: nil)
     }
     
     open func makeHintBlowNavBar(title showTitle: String,
-                                  duration: TimeInterval,
-                                  top:      CGFloat)
+                                 duration: TimeInterval,
+                                 top:      CGFloat,
+                                 backgroundColor: UIColor?)
     {
         let screenWidth = UIScreen.main.bounds.size.width
         let viewHeight: CGFloat = UIView.iphoneIs4(33, is5: 40, is6: 44, isPlus: 44)
@@ -31,20 +32,23 @@ extension UIView {
         let baseView = UIView.init()
         baseView.layer.masksToBounds = true
         baseView.frame = CGRect(x: 0,
-                                    y: top,
-                                    width: self.frame.size.width,
-                                    height: viewHeight)
+                                y: top,
+                                width: self.frame.size.width,
+                                height: viewHeight)
         
         let view = UIView.init(frame: CGRect(x: padToSide,
-                            y: -viewHeight,
-                            width: screenWidth - 2 * padToSide,
-                            height: viewHeight))
+                                             y: -viewHeight,
+                                             width: screenWidth - 2 * padToSide,
+                                             height: viewHeight))
         view.tag = 999
-        view.backgroundColor = UIColor.black
         view.layer.masksToBounds = true
         view.layer.cornerRadius = 2
-        let rgb: CGFloat = 0.05
-        view.backgroundColor = UIColor.init(red: rgb, green: rgb, blue: rgb, alpha: 0.7)
+        if let bgColor = backgroundColor {
+            view.backgroundColor = bgColor
+        } else {
+            let rgb: CGFloat = 0.05
+            view.backgroundColor = UIColor.init(red: rgb, green: rgb, blue: rgb, alpha: 0.7)
+        }
         
         // 文字
         let label = UILabel.init()
@@ -61,11 +65,12 @@ extension UIView {
         
         self.addSubview(baseView)
         
-        UIView.animate(withDuration: 0.4, animations: { 
+        UIView.animate(withDuration: 0.4, animations: {
             view.frame = CGRect(x: padToSide, y: 0, width: screenWidth - 2 * padToSide, height: viewHeight)
-            }, completion: { (finsh) in
-                self .perform(#selector(self.hidden(_:)), with: baseView, afterDelay: duration)
-        }) 
+        }, completion: { [weak self] (finsh) in
+            guard let wSelf = self else { return }
+            wSelf.perform(#selector(wSelf.hidden(_:)), with: baseView, afterDelay: duration)
+        })
     }
     
     @objc fileprivate func hidden(_ baseView: UIView) {
@@ -77,19 +82,19 @@ extension UIView {
         UIView.animate(withDuration: 0.25, animations: {
             
             eView.frame = CGRect(x: eView.frame.origin.x,
-                y: -eView.bounds.size.height,
-                width: screenWidth - 2 * eView.frame.origin.x,
-                height: eView.bounds.size.height)
+                                 y: -eView.bounds.size.height,
+                                 width: screenWidth - 2 * eView.frame.origin.x,
+                                 height: eView.bounds.size.height)
             
-            }, completion: { (finsh) in
-                
-                baseView.removeFromSuperview()
-                
-        }) 
+        }, completion: { [weak baseView] (finsh) in
+            
+            baseView?.removeFromSuperview()
+            
+        })
     }
     
     fileprivate class func iphoneIs4(_ iphone4: CGFloat, is5: CGFloat, is6: CGFloat, isPlus: CGFloat) -> CGFloat {
-       
+        
         let bounds = UIScreen.main.bounds
         if bounds.size.width == 320 {
             if bounds.size.height == 568 {
@@ -136,22 +141,22 @@ extension UIView {
     
     // eg: title、identity、bot
     open func makeCTHint(title showTitle: String?,
-                                 content: String?)
+                         content: String?)
     {
         KKHint.makeHitWithTitle(showTitle,content: content, view: self, duration: KKHint.SMMBDurationForever, tapIn: false, superTop: KKHint.SMMBSuperTopInvalid, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     // eg: title、identity、bot
     open func makeCTHint(title showTitle: String?,
-                                 content: String?,
-                                 superBot: CGFloat)
+                         content: String?,
+                         superBot: CGFloat)
     {
         KKHint.makeHitWithTitle(showTitle, content: content, view: self, duration: KKHint.SMMBDurationForever, tapIn: false, superTop: KKHint.SMMBSuperTopInvalid, superBot: superBot)
     }
     
     // eg: title、identity、bot
     open func makeCTHint(title showTitle: String?,
-                                 content: String?,
-                                 superTop: CGFloat)
+                         content: String?,
+                         superTop: CGFloat)
     {
         KKHint.makeHitWithTitle(showTitle, content: content, view: self, duration: KKHint.SMMBDurationForever, tapIn: false, superTop: superTop, superBot: KKHint.SMMBSuperBottomInvalid)
     }
@@ -189,33 +194,33 @@ extension UIView {
     }
     
     open func makeHint(title showTitle: String?,
-                               superBot:  KKHint.SMMBSuperBottom)
+                       superBot:  KKHint.SMMBSuperBottom)
     {
         KKHint.makeHitWithTitle(showTitle, view: self, duration: KKHint.SMMBDurationDefault, tapIn: false, superTop: KKHint.SMMBSuperTopInvalid, superBot: superBot)
     }
     
     open func makeHint(title showTitle: String?,
-                               superTop: KKHint.SMMBSuperTop)
+                       superTop: KKHint.SMMBSuperTop)
     {
         KKHint.makeHitWithTitle(showTitle, view: self, duration: KKHint.SMMBDurationDefault, tapIn: false, superTop: superTop, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     
     open func makeHint(title showTitle: String?,
-                               content: String?,
-                               tapIn: Bool)
+                       content: String?,
+                       tapIn: Bool)
     {
         KKHint.makeHitWithTitle(showTitle, content: content, view: self, duration: KKHint.SMMBDurationDefault, tapIn: tapIn, superTop: KKHint.SMMBSuperTopInvalid, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     
     open func makeHint(title showTitle: String?,
-                               tapIn: Bool)
+                       tapIn: Bool)
     {
         KKHint.makeHitWithTitle(showTitle, view: self, duration: KKHint.SMMBDurationDefault, tapIn: tapIn, superTop: KKHint.SMMBSuperTopInvalid, superBot: KKHint.SMMBSuperBottomInvalid)
     }
     
     open func makeHint(title showTitle: String?,
-                               tapIn: Bool,
-                               duration: KKHint.SMMBDuration)
+                       tapIn: Bool,
+                       duration: KKHint.SMMBDuration)
     {
         KKHint.makeHitWithTitle(showTitle, view: self, duration: duration, tapIn: tapIn, superTop: KKHint.SMMBSuperTopInvalid, superBot: KKHint.SMMBSuperBottomInvalid)
     }
@@ -225,10 +230,10 @@ extension UIView {
     /// superBot:  到俯视图底部的距离
     /// tapIn:     是否点击能够穿透到提示框的下面的视图
     open func makeHitWithTitle(_ title: String?,
-                                duration: Double,
-                                tapIn: Bool,
-                                superTop: KKHint.SMMBSuperTop,
-                                superBot: KKHint.SMMBSuperBottom)
+                               duration: Double,
+                               tapIn: Bool,
+                               superTop: KKHint.SMMBSuperTop,
+                               superBot: KKHint.SMMBSuperBottom)
     {
         KKHint.makeHitWithTitle(title, view: self, duration: duration, tapIn: tapIn, superTop: superTop, superBot: superBot)
     }
@@ -257,12 +262,12 @@ extension UIView {
     
     @available(iOS, deprecated: 1.0, message: "deprecated identity,view")
     open func makeHitWithTitle(_ title: String?,
-                                 identity: String?,
-                                 view: UIView?,
-                                 duration: Double,
-                                 tapIn: Bool,
-                                 superTop: KKHint.SMMBSuperTop,
-                                 superBot: KKHint.SMMBSuperBottom)
+                               identity: String?,
+                               view: UIView?,
+                               duration: Double,
+                               tapIn: Bool,
+                               superTop: KKHint.SMMBSuperTop,
+                               superBot: KKHint.SMMBSuperBottom)
     {
         KKHint.makeHitWithTitle(title, view: self, duration: duration, tapIn: tapIn, superTop: superTop, superBot: superBot)
     }
