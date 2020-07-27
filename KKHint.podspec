@@ -28,4 +28,8 @@ Pod::Spec.new do |s|
 
   s.resource     = "KKHint/KKHint/resource.bundle"
 
+  if spec.respond_to? 'swift_version'
+    s.swift_version = "5.0"
+  end
+
 end
