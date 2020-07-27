@@ -4,23 +4,23 @@ Pod::Spec.new do |s|
 
   s.name         = "KKHint"
 
-  s.version      = "1.1.3"
+  s.version      = "5.0.0"
 
-  s.summary      = "KKHint -> custom hint view"
+  s.summary      = "custom hint view, support 5.0.0 from version 5.0.0"
 
   s.description  = <<-DESC
-  make a hint on a view. extension for UIView
+  custom hint view, support 5.0.0 from version 5.0.0
                    DESC
 
-  s.homepage     = "https://github.com/TieShanWang/KKHint"
+  s.homepage     = "https://github.com/onetys/KKHint"
 
   s.license      = "MIT"
 
   s.author             = { "wangtieshan" => "15003836653@163.com" }
 
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
 
-  s.source       = { :git => "https://github.com/TieShanWang/KKHint.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/onetys/KKHint.git", :tag => s.version }
 
   s.framework  = "UIKit"
 
